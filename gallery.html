@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Italic;
+  padding: 10px;
+  background: rgb(242, 32, 158);
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: rgb(239, 6, 146);
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #f0a4dd;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: rgb(239, 6, 146);
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color:rgb(239, 6, 146);
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color:pink;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>My Random Gallery</h1>
+  <p>“Only gallery can remind everything that you forget”</p>
+</div>
+
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="biodata.html">Biodata</a>
+  <a href="experience.html">Experience</a>
+  <a href="education.html">Education</a>
+  <a href="family.html">Family</a>
+  <a href="gallery.html">Gallery</a>
+
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+	<center>
+	<h2>UITM KOTA BHARU</h2>
+      <img src="gambar/gmbr1.jfif" height="430" width="350" alt="Gallery" title="Gallery">
+      <img src="gambar/gmbr2.jfif" height="420" width="530" alt="Gallery" title="Gallery">
+      <img src="gambar/gmbr3.jfif" height="420" width="550" alt="Gallery" title="Gallery">
+	  <center/>
+    </div>
+    <div class="card">
+	<center>
+      <h2>UITM MACHANG</h2>
+      <img src="gambar/m1.jfif" height="430" width="350" alt="Gallery" title="Gallery">
+      <img src="gambar/m2.jfif" height="430" width="430" alt="Gallery" title="Gallery">
+      <img src="gambar/m3.jfif" height="430" width="600" alt="Gallery" title="Gallery">
+	  <center/>
+    </div>
+	<div class="card">
+	<center>
+      <h2>RAYA OPENHOUSE</h2>
+      <img src="gambar/oh1.jfif" height="750" width="650" alt="Gallery" title="Gallery">
+      <img src="gambar/op2.jfif" height="600" width="750" alt="Gallery" title="Gallery">
+	  <center/>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+	<center>
+    <h2>UITM RAYA</h2>
+      <img src="gambar/UITM RAYA.jfif" height="300" width="300" alt="Gallery" title="Gallery">
+	  <center/>
+    </div>
+    <div class="card">
+	<center>
+    <h2>HAPPY GO LUCKY ME</h2>
+     <img src="gambar/HAPPY ME.jfif" height="300" width="300" alt="Gallery" title="Gallery">
+     <img src="gambar/ME AGAIN.jfif" height="300" width="300" alt="Gallery" title="Gallery">
+	 <center/>
+    </div>
+	<div class="card">
+	<center>
+    <h2>ROOMATES</h2>
+     <img src="gambar/rm1.jfif" height="350" width="450" alt="Gallery" title="Gallery">
+	 <center/>
+    </div>
+	<div class="card">
+	<center>
+    <h2>GROUPMATES</h2>
+     <img src="gambar/GM1.jfif" height="230" width="230" alt="Gallery" title="Gallery">
+     <img src="gambar/KAWAN 2.jfif" height="230" width="230" alt="Gallery" title="Gallery">
+	 <center/>
+    </div>
+	<div class="card">
+	<center>
+    <h2>JSP MEMBERS</h2>
+     <img src="gambar/kelab jsp.jfif" height="300" width="380" alt="Gallery" title="Gallery">
+	 <center/>
+    </div>
+	
+   
+	
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

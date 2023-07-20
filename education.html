@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Italic;
+  padding: 10px;
+  background: pink;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: rgb(215, 111, 215);
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #997070;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #bc8f8f;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #bc8f8f;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: #D3D3D3;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #808080;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+  } 
+/* The actual timeline (the vertical ruler) */ 
+.timeline { 
+  position: relative; 
+  max-width: 1100px; 
+  margin: 0 auto; 
+} 
+ 
+/* The actual timeline (the vertical ruler) */ 
+.timeline::after { 
+  content: ''; 
+  position: absolute; 
+  width: 5px; 
+  background-color: black; 
+  top: 0; 
+  bottom: 0; 
+  left: 50%; 
+  margin-left: -3px; 
+} 
+ 
+/* Container around content */ 
+.container { 
+  padding: 8px 38px; 
+  position: relative; 
+  background-color: inherit; 
+  width: 50%; 
+} 
+ 
+/* The circles on the timeline */ 
+.container::after { 
+  content: ''; 
+  position: absolute; 
+  width: 25px; 
+  height: 25px; 
+  right: -17px; 
+  background-color: black; 
+  border: 4px solid palevioletred; 
+  top: 15px; 
+  border-radius: 40%; 
+  z-index: 1; 
+} 
+ 
+/* Place the container to the left */ 
+.left { 
+  left: 0; 
+} 
+ 
+/* Place the container to the right */ 
+.right { 
+  left: 50%; 
+} 
+ 
+/* Add arrows to the left container (pointing right) */ 
+.left::before { 
+  content: " "; 
+  height: 0; 
+  position: absolute; 
+  top: 22px; 
+  width: 0; 
+  z-index: 1; 
+  right: 30px; 
+  border: medium solid white; 
+  border-width: 10px 0 10px 10px; 
+  border-color: transparent transparent transparent white;
+} 
+ 
+/* Add arrows to the right container (pointing left) */ 
+.right::before { 
+  content: " "; 
+  height: 0; 
+  position: absolute; 
+  top: 22px; 
+  width: 0; 
+  z-index: 1; 
+  left: 30px; 
+  border: medium solid white; 
+  border-width: 10px 10px 10px 0; 
+  border-color: transparent white transparent transparent; 
+} 
+ 
+/* Fix the circle for containers on the right side */ 
+.right::after { 
+  left: -16px; 
+} 
+ 
+/* The actual content */ 
+.content { 
+  padding: 20px 30px; 
+  background-color: white; 
+  position: relative; 
+  border-radius: 6px; 
+} 
+ 
+/* Media queries - Responsive timeline on screens less than 600px wide */ 
+@media screen and (max-width: 600px) { 
+  /* Place the timelime to the left */ 
+  .timeline::after { 
+  left: 31px; 
+  } 
+   
+  /* Full-width containers */ 
+  .container { 
+  width: 90%; 
+  padding-left: 65px; 
+  padding-right: 25px; 
+  } 
+   
+  /* Make sure that all arrows are pointing leftwards */ 
+  .container::before { 
+  left: 60px; 
+  border: medium solid white; 
+  border-width: 10px 10px 10px 0; 
+  border-color: transparent white transparent transparent; 
+  } 
+ 
+  /* Make sure all circles are at the same spot */ 
+  .left::after, .right::after { 
+  left: 15px; 
+  } 
+   
+  /* Make all right containers behave like the left ones */ 
+  .right { 
+  left: 0%; 
+  } 
+} 
+ /* css example  */
+span { 
+  content: "\003E"; 
+} 
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Education,The Mother of Leadership</h1>
+  <p>"Education is the key to unlocking the world. It is the passport to freedom-Oprah Winfrey "</p>
+</div>
+
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="biodata.html">Biodata</a>
+  <a href="experience.html">Experience</a>
+  <a href="education.html">Education</a>
+  <a href="family.html">Family </a>
+  <a href="gallery.html">Gallery</a>
+
+</div>
+<body>
+
+<p><h2><b><u>EDUCATION</u><b></h2> 
+<div class="timeline"> 
+  <div class="container left"> 
+    <div class="content"> 
+      <h2>2005</h2> 
+     <p><u><b>4 Years Old</b></u></p> 
+   <img src="gambar/gambar farley.jfif" alt="tabika" style="width:210px;height:150px;"> 
+      <p>TADIKA FARLEY'S</p><br> 
+    </div> 
+  </div> 
+  <div class="container right"> 
+    <div class="content"> 
+      <h2>2006-2011</h2> 
+      <p><u><b>5-10 Years Old</b></u></p> 
+   <img src="gambar/gambar peirchih.jfif" alt="SK" style="width:220px;height:150px;"> 
+      <p>SJK (C) PEIR CHIH</p><br> 
+    </div> 
+  </div> 
+  <div class="container left"> 
+    <div class="content"> 
+      <h2>2012-2013</h2> 
+      <p><u><b>11-12 Years Old</u></p> 
+   <img src="gambar/gambar islah.jfif" alt="smk" style="width:230px;height:160px;"> 
+      <p>SEKOLAH KEBANGSAAN ISLAH</p><br> 
+    </div> 
+  </div> 
+  <div class="container right"> 
+    <div class="content"> 
+      <h2>2014-2018</h2> 
+       <p><u><b>13-17 Years Old</b></u></p> 
+   <img src="gambar/gambar smip.jfif" alt="smk" style="width:230px;height:160px;"> 
+   <img src="gambar/gambar smip 2.jfif" alt="smk" style="width:230px;height:160px;"> 
+      <p>SEKOLAH MENENGAH KEBANGSAAN ISMAIL PETRA</p><br></p> 
+    </div> 
+  </div> 
+  <div class="container left"> 
+    <div class="content"> 
+      <h2>2019 - 2021</h2> 
+      <p><p><u><b>18-20 Years Old</b></u></p> 
+   <img src="gambar/gambar mache.jfif" alt="smk" style="width:180px;height:150px;"> 
+   <img src="gambar/gambar dip2.jfif" alt="smk" style="width:180px;height:150px;"> 
+      <p>UNIVERSITY OF TECHNOLOGY MARA MACHANG</p><br></p></p> 
+    </div> 
+  </div> 
+  <div class="container right"> 
+    <div class="content"> 
+      <h2>2022 - NOW</h2> 
+     <p><u><b>21- NOW Years</b></u></p> 
+   <img src="gambar/gambar kb.jfif" alt="uitm" style="width:180px;height:150px;"> 
+   <img src="gambar/gambar degree.jfif" alt="uitm" style="width:180px;height:150px;"> 
+      <p>UNIVERSITY OF TECHNOLOGY MARA KOTA BHARU</p><br></p></p></p> 
+    </div> 
+  </div> 
+</div> 
+    <div class="card"> 
+
+      <h2><b><u>Achievement</u><b></h2> 
+   
+<style> 
+table, th, td { 
+  border:3px solid black; 
+  font-family: Calibri 
+} 
+</style>  
+<table> 
+   <table style="width:100%"> 
+  <tr> 
+    <th>School</th> 
+    <th>Achievement</th> 
+  </tr> 
+<tr> 
+    <td><i><b>Primary School<b><i></td> 
+ <ul> 
+    <td> 
+ <li>100 metre (THIRD PLACE)</li> 
+ <li>Swimming (PARTICIPATION)</li> 
+ <li>Handball (DISTRICT LEVEL)</li> 
+ <li>Volleyball (DISTRICT LEVEL)</li> 
+ <li>Colouring Competition (PARTICIPATION)</li> 
+ <li>Laboratory Supervisor</li> 
+ </ul> 
+    </td> 
+  </tr>
+<tr> 
+ <td><i><b>Secondary School<b><i></td> 
+    <ul> 
+    <td> 
+ <li>Badminton (SCHOOL LEVEL) </li>
+ <li>100 metre (SCHOOL LEVEL)</li>
+ <li>200 metre (SCHOOL LEVEL)</li> 
+ <li>4X100 metre (SCHOOL LEVEL)</li>
+ <li>Travel Club Secretary</li>
+ <li>School Prefects (LEADER)</li>
+ <li>Others</li> 
+ </ul> 
+    </td> 
+  </tr> 
+<tr> 
+ <td><i><b>UiTM MACHANG & UITM KOTA BHARU<b><i></td> 
+    <ul> 
+    <td> 
+<li>HAC CLUB MEMBER</li>
+ <li>ASSISTANT CLASS REP FOR DIPLOMA</li>
+ <li>EXCO HAC CLUB</li>
+ <li>MEMBER OF BUSINESS CLUB </li>
+ <li>MEMBER OF FINCEPTIVE CLUB </li>
+ <li>EXCO OF JSP CLUB </li>
+ </ul> 
+    </td> 
+ </tr> 
+</table> 
+ <p><i>“WINNERS NEVER QUIT AND QUITTERS NEVER WIN- VINCE LONBARDI”</i></p> 
+  </div> 
+    </div> 
+ </div> 
+ <div class="row"> 
+ <div class="left-side"> 
+    <div class="card"> 
+      <h3><i><u>Educational Status</i></u></h3>
+ 
+   <ol> 
+      <li>SPM = 4A</li> 
+   <li>Diploma= 3.65</li>
+   <li>DEGREE = 3.50</li> 
+ 
+   </ol> 
+    </div> 
+  </div> 
+</div> 
+<div class="footer"> 
+ <h3><u>Quote of The Day</u></h3> 
+      <p><i>“I DON'T LOVE STUDYING, I HATE STUDYING. I LIKE LEARNING. LEARNING IS BEAUTIFUL. - NATALIE PORTMAN”</i></p> 
+    </div> 
+ 
+</body> 
+</html>
+</body>
+</html>
